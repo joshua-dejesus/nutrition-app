@@ -1,0 +1,3 @@
+import calculations.calculation_file
+
+calculations.calculation_file.get_nutrition_recommendation()
