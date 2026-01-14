@@ -11,20 +11,18 @@ def calculate_daily_calories(weight_in_lbs: float, height_in_inches: int, sex: s
 
     total_calories_expenditure = bmr
 
-    if activity_level == 'Sedentary':
+    if activity_level == 'sedentary':
         total_calories_expenditure *= 1.2
-    elif activity_level == 'Lightly Acitve':
+    elif activity_level == 'lightly acitve':
         total_calories_expenditure *= 1.375
-    elif activity_level == 'Moderately Active':
+    elif activity_level == 'moderately active':
         total_calories_expenditure *= 1.55
-    elif activity_level == 'Active':
+    elif activity_level == 'active':
         total_calories_expenditure *= 1.725
     else:
         total_calories_expenditure *= 1.9
 
-    return total_calories_expenditure
+    return int(total_calories_expenditure)
 
 
-def get_nutrition_recommendation():
-    df = data_files.daily_intakes.daily_intake_table_df
     
