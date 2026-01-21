@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Nutrition/Calorie Calculator</h1>
+    <form method="POST" action="/analyze">
+        <input name="sex" placeholder="Input your sex: ">
+        <input name="age" placeholder="Input your age: ">
+        <input name="weight" placeholder="Input your weight: ">
+        <input name="height" placeholder="Input your height: ">
+        <input name="activity_level" placeholder="Input your activity level: ">
+        <button type="submit">Submit</button>
+    </form>
+    {% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+</body>
+</html>
