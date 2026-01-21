@@ -16,3 +16,4 @@ print("\nYour calculated daily caloric expenditure is: " + str(calories))
 
 print("\nYour recommended daily nutrients intake is: ")
 nutrients = data_files.daily_intakes.get_nutrition_recommendation(new_user.age_in_years, new_user.sex)
+print (nutrients)

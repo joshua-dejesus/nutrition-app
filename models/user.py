@@ -1,3 +1,7 @@
+import calculations.calculation_file
+import data_files.daily_intakes
+
+
 class User:
     def __init__(self, sex: str, age_in_years: int, weight_in_lbs: float, height_in_inches: int, activity_level: str):
         self._sex = sex
@@ -25,3 +29,11 @@ class User:
     @property
     def activity_level (self) -> str:
         return self._activity_level
+
+    @property
+    def daily_calories_expenditure (self) -> int:
+        return calculations.calculation_file.calculate_daily_calories(self.weight_in_lbs, self.height_in_inches, self.sex, self.age_in_years, self.activity_level)
+
+    @property
+    def nutrition_recommendation (self):
+        return data_files.daily_intakes.get_nutrition_recommendation(self.age_in_years, self.sex)
