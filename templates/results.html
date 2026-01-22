@@ -8,6 +8,18 @@
 <body>
     <h1>Your Results</h1>
     <p>Recommended calories: {{calories}}</p>
-    <p>Recommended nutrients: {{nutrients}}</p>
+    <h2>Recommended nutrients: </h2>
+    <table>
+        <tr>
+            <th>Nutrient</th>
+            <th>Recommended amount: </th>
+        </tr>
+        {% for nutrient_name, nutrient_value in nutrients.items() %}
+        <tr>
+            <td>{{ nutrient_name }}</td>
+            <td>{{ nutrient_value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
